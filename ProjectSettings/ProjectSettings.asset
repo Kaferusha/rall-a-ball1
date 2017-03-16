@@ -9,7 +9,7 @@ PlayerSettings:
   targetDevice: 2
   targetResolution: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Kaferusha
   productName: Roll a Ball
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 3.82050013e-41, y: 5.3809861e-43}
@@ -72,13 +72,13 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleIdentifier: com.Kaferusha.Sample1
-  bundleVersion: 1.0
+  bundleVersion: 1.1
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   productGUID: c80e31d128e29464a9222a4158d4ec13
-  AndroidBundleVersionCode: 1
+  AndroidBundleVersionCode: 2
   AndroidMinSdkVersion: 21
   AndroidPreferredInstallLocation: 1
   aotOptions: 

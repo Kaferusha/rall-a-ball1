@@ -19,12 +19,20 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		float moveHorizontal = Input.GetAxis("Horizontal");
-		float moveVertical = Input.GetAxis("Vertical");
+		float moveHorizontal;
+		float moveVertical;
 
-		Vector3 movement = new Vector3(moveHorizontal,0.0f,moveVertical);
-
-		rb.AddForce(movement * speed);
+		if(SystemInfo.deviceType == DeviceType.Desktop) {
+			moveHorizontal = Input.GetAxis("Horizontal");
+			moveVertical = Input.GetAxis("Vertical");
+			Vector3 movement = new Vector3(moveHorizontal,0.0f,moveVertical);
+			rb.AddForce(movement * speed);
+		} else {
+			moveHorizontal = Input.acceleration.x;
+			moveVertical = Input.acceleration.y;
+			Vector3 movement = new Vector3(moveHorizontal,0.0f,moveVertical);
+			rb.AddForce(movement * speed);
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {
